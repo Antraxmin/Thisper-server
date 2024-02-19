@@ -1,6 +1,9 @@
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
+from fastapi import FastAPI, HTTPException, Response
+from pydantic import BaseModel
+from googleapiclient.discovery import build
+import json
+from connect import router as connect_router
 
 app = FastAPI()
-# app.mount("/", StaticFiles(directory="public", html = True), name="static")
 
+app.include_router(connect_router, prefix="/connect")
