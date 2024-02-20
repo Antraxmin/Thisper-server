@@ -4,7 +4,6 @@ import json
 from collections import OrderedDict
 from models.gpt import MyGPT
 
-
 print("JSON 파일을 불러옵니다.")
 json_file_path = sys.argv[1]
 if not os.path.isfile(json_file_path):
@@ -40,10 +39,10 @@ You are a Socratic tutor. Use the following principles in responding to students
 """
 role_assistant = p_title + p_description + """
 댓글들을 표현할 수 있는 색상:
-빨간색 - 잘못된 정보나 댓글의 질이 매우 안좋은 것을 나타냄. 매우 위험하고 심각한 경우에 사용. 
-노란색 - 약간 잘 생각되지 못하고 쓴 댓글을 나타냄.
-하얀색 - 주제와 관련 없거나 아무런 의미나 작성 의도가 없는 평범하고 기본적인 댓글을 나타냄.
-파란색 - 누가 보아도 정말 잘 작성된 좋은 댓글을 나타냄.
+red - 잘못된 정보나 댓글의 질이 매우 안좋은 것을 나타냄. 매우 위험하고 심각한 경우에 사용. 
+yello - 약간 잘 생각되지 못하고 쓴 댓글을 나타냄.
+white - 주제와 관련 없거나 아무런 의미나 작성 의도가 없는 평범하고 기본적인 댓글을 나타냄.
+skyblue - 누가 보아도 정말 잘 작성된 좋은 댓글을 나타냄.
 
 단 만약 영상에 대한 설명이 조금 부실하다면 해당 영상이 좋은 영상인지 나쁜영상인지 잘 모르고 이에 대해 옹호하고 비판하는 댓글인지 잘 알 수 없으므로 색상판단에 주의할 것.
 """
