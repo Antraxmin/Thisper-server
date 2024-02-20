@@ -1,8 +1,6 @@
-from fastapi import FastAPI, HTTPException, Response
-from pydantic import BaseModel
+from fastapi import FastAPI
 from googleapiclient.discovery import build
-import json
-from connect import router as connect_router
+from api.connect import router as connect_router
 
 app = FastAPI()
 
